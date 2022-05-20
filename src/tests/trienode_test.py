@@ -1,6 +1,7 @@
 import unittest
 from trie import TrieNode
 
+
 class TestTrieNode(unittest.TestCase):
     def setUp(self):
         self.node = TrieNode("Dm")

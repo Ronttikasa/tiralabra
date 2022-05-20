@@ -20,6 +20,7 @@ class TrieNode:
     def set_sequence_end(self):
         self.end = True
 
+
 class Trie:
     def __init__(self):
         self._root = TrieNode(None)
@@ -32,8 +33,3 @@ class Trie:
             else:
                 current_node.add_child(chord)
             current_node = current_node.children[chord]
-
-
-
-
-
