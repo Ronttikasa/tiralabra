@@ -24,7 +24,7 @@ class Trie:
     def __init__(self):
         self._root = TrieNode(None)
 
-    def insert_sequence(self, sequence):
+    def insert_sequence(self, sequence: list):
         current_node = self._root
         for chord in sequence:
             if chord in current_node.children:
