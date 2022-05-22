@@ -2,3 +2,4 @@ src/**/__pycache__/
 .pytest_cache
 htmlcov
 .coverage
+dokumentaatio/viikkoraportit_raw.md
