@@ -46,7 +46,7 @@ class Trie:
         current_node = self._root
         for chord in sequence:
             if chord in current_node.children:
-                current_node = current_node[chord]
+                current_node = current_node.children[chord]
             else:
                 return None
         return current_node.children
