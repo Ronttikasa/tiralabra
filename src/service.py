@@ -56,7 +56,6 @@ class Service:
         Returns:
             list: List of generated chords.
         """
-        markov_length = markov_degree + 1
         output = []
         previous_sequence = []
 
@@ -68,7 +67,7 @@ class Service:
             output.append(next_chord)
             previous_sequence.append(next_chord)
 
-            if len(previous_sequence) > markov_length:
+            if len(previous_sequence) > markov_degree:
                 previous_sequence.pop(0)
 
         return output

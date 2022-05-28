@@ -28,3 +28,19 @@ class TestTrieNode(unittest.TestCase):
         self.trie.insert_sequence(["Dm", "Gm"])
         self.assertEqual(len(self.root.children), 1)
         self.assertEqual(len(self.root.children["Dm"].children), 2)
+
+    def test_find_next(self):
+        self.trie.insert_sequence(["Dm", "Gm", "Am"])
+        self.trie.insert_sequence(["Dm", "Gm", "Em"])
+        self.trie.insert_sequence(["Dm", "C", "Dm"])
+        children = self.trie.find_next_chords(["Dm", "Gm"])
+
+        self.assertEqual(len(children), 2)
+
+    def test_no_matching_sequence(self):
+        self.trie.insert_sequence(["Dm", "Gm", "Am"])
+        self.trie.insert_sequence(["Dm", "Gm", "Em"])
+        self.trie.insert_sequence(["Dm", "C", "Dm"])
+        children = self.trie.find_next_chords(["Dm", "Am"])
+
+        self.assertFalse(children)
