@@ -24,6 +24,9 @@ class TrieNode:
     def get_children(self):
         return self.children
 
+    def get_occurrences(self):
+        return self.occurrences
+
 
 class Trie:
     """Class that represents a Trie data structure"""
