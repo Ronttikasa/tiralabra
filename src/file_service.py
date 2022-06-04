@@ -13,18 +13,17 @@ class FileService:
         with open(data_path) as file:
             for row in file:
                 row = row.replace("\n", "")
-                parts = row.split(";")
+                parts = row.split()
                 for part in parts:
                     output.append(part)
-        
+
         return output
 
-    def create_sequences(self, filename: str):
-        data = self.read_file(filename)
+    def create_sequences(self, data: list):
         sequences = []
 
         for index in range(len(data)-2):
-            sequences.append([data[index:index+3]])
+            sequences.append(data[index:index+3])
 
         return sequences
 
