@@ -3,3 +3,4 @@ src/**/__pycache__/
 htmlcov
 .coverage
 dokumentaatio/viikkoraportit_raw.md
+data/output/**.txt
