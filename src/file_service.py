@@ -42,7 +42,7 @@ class FileService:
         """
         sequences = []
 
-        for index in range(len(data)-sequence_length-1):
+        for index in range(len(data)-sequence_length+1):
             sequences.append(data[index:index+sequence_length])
 
         return sequences
