@@ -1,5 +1,6 @@
 import os
 
+
 class FileService:
     def __init__(self):
         pass
@@ -19,23 +20,21 @@ class FileService:
 
         return output
 
-    def create_sequences(self, data: list):
+    def create_sequences(self, data: list, sequence_length: int):
         sequences = []
 
-        for index in range(len(data)-2):
-            sequences.append(data[index:index+3])
+        for index in range(len(data)-sequence_length-1):
+            sequences.append(data[index:index+sequence_length])
 
         return sequences
 
-    def write_file(self, input: list, filename: str):
+    def write_file(self, input_data: list, filename: str):
         dirname = os.path.dirname(__file__)
         data_path = os.path.join(dirname, "..", "data", "output", filename)
-        
+
         n = 4
-        input_rows = [input[i:i+n] for i in range(0, len(input), n)]
+        input_rows = [input_data[i:i+n] for i in range(0, len(input_data), n)]
 
         with open(data_path, "w") as file:
             for row in input_rows:
                 file.write(" ".join(row) + "\n")
-
-

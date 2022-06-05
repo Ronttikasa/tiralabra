@@ -6,8 +6,8 @@ class TrieService:
     """Class responsible for application logic.
     """
 
-    def __init__(self):
-        self._trie = Trie()
+    def __init__(self, trie=None):
+        self._trie = trie or Trie()
 
     def insert(self, sequences: list):
         """Insert a number of chord sequences in the trie.
@@ -71,4 +71,3 @@ class TrieService:
                 previous_sequence.pop(0)
 
         return output
-

@@ -4,3 +4,4 @@ htmlcov
 .coverage
 dokumentaatio/viikkoraportit_raw.md
 data/output/**.txt
+src/testingtesting.py
