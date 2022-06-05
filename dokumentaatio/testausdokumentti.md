@@ -1,6 +1,6 @@
 # Testausdokumentti
 
-Sovellusta on testattu automaattisilla yksikkötesteillä.
+Sovellusta on testattu automaattisilla yksikkötesteillä. Sovellusta on testattu manuaalisesti myös end-to-end-tasolla [data-kansiosta](/data/input) löytyvällä testidatalla, jolla on pystytty toteamaan että sovellus toimii kokonaisuutena odotetulla tavalla. 
 
 ## Testien suorittaminen
 
@@ -16,5 +16,5 @@ poetry run invoke coverage-report
 
 ## Testikattavuus
 
-Testikattavuus seurattavissa Codecovissa: 
+Yksikkötestien testikattavuus seurattavissa Codecovissa: 
 [![codecov](https://codecov.io/gh/Ronttikasa/tiralabra/branch/main/graph/badge.svg?token=JEOZCTXS7I)](https://codecov.io/gh/Ronttikasa/tiralabra)
