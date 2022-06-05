@@ -25,4 +25,5 @@ Ohjelman asennus:
 - Ohjelma tallentaa generoidun sointusarjan käyttäjän antaman nimen nimiseen tiedostoon _data/output_-hakemistoon.
 
 Esimerkki ohjelmalle annettavista syötteistä:
+
 ![image](https://user-images.githubusercontent.com/44512829/172072912-428131a3-6ea1-4baf-94a2-c6305ac603e6.png)
