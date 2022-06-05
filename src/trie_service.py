@@ -3,7 +3,7 @@ from trie import Trie
 
 
 class TrieService:
-    """Class responsible for application logic.
+    """Class responsible for handling data stored in a Trie.
     """
 
     def __init__(self, trie=None):
