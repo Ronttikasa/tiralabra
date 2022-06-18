@@ -4,4 +4,8 @@ htmlcov
 .coverage
 dokumentaatio/viikkoraportit_raw.md
 data/output/**.txt
+data/output/**.ly
+data/output/**.mid
+data/output/**.pdf
 src/testingtesting.py
+vertaisarvioitavat
