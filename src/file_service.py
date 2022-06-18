@@ -4,6 +4,7 @@ import os
 class FileService:
     """Class responsible for file handling and data preparation.
     """
+
     def __init__(self):
         pass
 

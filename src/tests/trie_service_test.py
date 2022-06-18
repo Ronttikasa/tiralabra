@@ -11,8 +11,8 @@ class TestTrieService(unittest.TestCase):
 
         self.trie2 = Mock(wraps=Trie())
         self.service2 = TrieService()
-        self.input_data = [["Dm", "C", "Bb"], ["C", "Bb", "Dm"], ["Bb", "Dm", "C"], ["Dm", "C", "Gm"], 
-            ["C", "Gm", "Bb"], ["Gm", "Bb", "C"], ["Bb", "C", "Dm"], ["C", "Dm", "C"]]
+        self.input_data = [["Dm", "C", "Bb"], ["C", "Bb", "Dm"], ["Bb", "Dm", "C"], ["Dm", "C", "Gm"],
+                           ["C", "Gm", "Bb"], ["Gm", "Bb", "C"], ["Bb", "C", "Dm"], ["C", "Dm", "C"]]
         self.service2.insert(self.input_data)
 
     def test_insert_calls_trie_insert_function(self):

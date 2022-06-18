@@ -12,7 +12,8 @@ class AppLogic:
 
     def run(self):
         raw_input_data = self._file_svc.read_file(self._input)
-        input_data = self._file_svc.create_sequences(raw_input_data, self._markov_deg+1)
+        input_data = self._file_svc.create_sequences(
+            raw_input_data, self._markov_deg+1)
         self._trie_svc.insert(input_data)
 
         generated_output = self._trie_svc.generate_sequence(

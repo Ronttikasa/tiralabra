@@ -28,6 +28,7 @@ class TestABCParser(unittest.TestCase):
         self.assertEqual(output, abc_part)
 
     def test_strip_extra_characters(self):
-        cleaned_abc = ["F", "," ,"A", "a", "'", "B", "F", "A", "(", "3", "A", "A", "A"]
+        cleaned_abc = ["F", ",", "A", "a", "'",
+                       "B", "F", "A", "(", "3", "A", "A", "A"]
         output = self.parser._strip_extra(self.data2)
         self.assertEqual(output, cleaned_abc)

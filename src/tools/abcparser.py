@@ -19,7 +19,6 @@ class ABCParser:
             else:
                 output.append(row)
         return output
-        
 
     def _strip_extra(self, sequence: list):
         """Strip non-note characters from the abc notation.
@@ -53,7 +52,7 @@ class ABCParser:
                 i += 2
             elif i < len(sequence)-1 and sequence[i+1] in "234":
                 time_value = int(sequence[i+1])
-                for times in range(time_value):
+                for _ in range(time_value):
                     output.append(sequence[i])
                 i += 2
             elif i < len(sequence)-1 and sequence[i+1] in ",'":
@@ -64,17 +63,17 @@ class ABCParser:
                 i += 1
         return output
 
-    def prep_abc_for_trie(self, input_data: list):
-        data_v1 = self._remove_header(input_data)
+    def prep_abc_for_trie(self, abc_data: list):
+        data_v1 = self._remove_header(abc_data)
         data_v2 = self._strip_extra(data_v1)
         data_v3 = self._modify_time_values(data_v2)
         return data_v3
 
-    def _add_barlines(self, input_data: list):
+    def _add_barlines(self, abc_data: list):
         output = ""
         i = 0
-        while i < len(input_data):
-            output += input_data[i]
+        while i < len(abc_data):
+            output += abc_data[i]
             i += 1
             if i % 8 == 0:
                 output += "|"
@@ -86,17 +85,18 @@ class ABCParser:
         header = [
             "X: 1",
             "T: " + title,
-            "M: 4/4", 
+            "M: 4/4",
             "L: 1/8",
-            "K: " + key 
+            "K: " + key
         ]
         return header
 
     def convert_to_abc(self, notes_data: list, title: str, key: str):
         header = self._generate_header(title, key)
-        abc = self._add_barlines(notes_data)
-        header.append(abc)
+        abc_part = self._add_barlines(notes_data)
+        header.append(abc_part)
         return header
+
 
 if __name__ == "__main__":
 
@@ -129,7 +129,3 @@ if __name__ == "__main__":
 
     abc = parser.convert_to_abc(final_data, "testibiisi", "Dmaj")
     print(abc)
-
-    
-
-    
