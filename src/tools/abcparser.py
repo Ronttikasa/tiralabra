@@ -55,6 +55,11 @@ class ABCParser:
                 for _ in range(time_value):
                     output.append(sequence[i])
                 i += 2
+            elif i < len(sequence)-2 and sequence[i+1] in ",'" and sequence[i+2] in "234":
+                time_value = int(sequence[i+2])
+                for _ in range(time_value):
+                    output.append(sequence[i] + sequence[i+1])
+                i += 3
             elif i < len(sequence)-1 and sequence[i+1] in ",'":
                 output.append(sequence[i] + sequence[i+1])
                 i += 2
@@ -79,7 +84,7 @@ class ABCParser:
                 output += "|"
             elif i % 4 == 0:
                 output += " "
-        return output
+        return output + "|]"
 
     def _generate_header(self, title: str, key: str):
         header = [
@@ -96,36 +101,3 @@ class ABCParser:
         abc_part = self._add_barlines(notes_data)
         header.append(abc_part)
         return header
-
-
-if __name__ == "__main__":
-
-    input_data = [
-        "X: 2",
-        "T: The Maid Behind The Bar",
-        "R: reel",
-        "M: 4/4",
-        "L: 1/8",
-        "K: Dmaj",
-        # "E|FAAB AFED|FAAB (3AAAde|fBBA Bcde|fdgf efdB|",
-        # "FAAB AFED|FAAB A2de|fBBA BcdB|AFEF D3:|",
-        # "e|faag fdde|fdad fdd2|efga beef|gebe gee2|",
-        # "f'aaf faaf|defd e2de|fB,BA BcdB|AFEF D3:|"
-        "|:FAAB AFED|FA(3AAA ABde|fBBA Bcde|fBBA BcdA|",
-        "FAAB AFED|FAAB ABde|fBBA BcdB|AFEF D4:|"
-    ]
-
-    parser = ABCParser()
-
-    header_removed = parser._remove_header(input_data)
-    print("no header:")
-    print(header_removed)
-    cleaned_data = parser._strip_extra(header_removed)
-    print(cleaned_data)
-    final_data = parser._modify_time_values(cleaned_data)
-    print(final_data)
-
-    print("back to abc")
-
-    abc = parser.convert_to_abc(final_data, "testibiisi", "Dmaj")
-    print(abc)
