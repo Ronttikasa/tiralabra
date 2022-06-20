@@ -10,8 +10,9 @@ tbd
 
 ## Työn mahdolliset puutteet ja parannusehdotukset
 
-tbd
+ABC-notaation parserista puuttuu muutama sellainen ominaisuus joiden avulla sitä voisi huoletta käyttää minkä tahansa abc-nuotin lukemiseen - se ei esimerkiksi osaa lainkaan käsitellä sävellajiin kuulumattomia ylennys- ja alennusmerkintöjä eikä kertauksien maaleja. Tämän vuoksi testidataakin piti jonkin verran valikoida, toisaalta onneksi kansanmusiikki usein käyttää aika kiltisti pelkkiä sävellajin säveliä, toisaalta nyt myöskään generoituun musiikkiin ei tule mausteeksi mukaan muunnesäveliä.
 
 ## Lähteet
 
 [Trie, Wikipedia](https://en.wikipedia.org/wiki/Trie)
+[ABC-notaatio](https://abcnotation.com/blog/2010/01/31/how-to-understand-abc-the-basics/)
