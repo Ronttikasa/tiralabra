@@ -11,16 +11,20 @@ class AppLogic:
         self._key = ""
 
     def _reset_key(self):
+        """Reset the key signature of teaching data.
+        """
         self._key = ""
 
     def _read_teaching_data(self, filename: str):
+        """Read teaching data from input file and separates the individual tunes in the data.
+        """
         input_data = self._file_svc.read_file(filename)
 
         result = []
         tune = []
         for row in input_data:
             if row[0] == "X" and tune:
-                result.append(tune)               
+                result.append(tune)
                 tune = []
             if not self._key and row[0] == "K":
                 self._key = row[3:]
@@ -30,22 +34,34 @@ class AppLogic:
         return result
 
     def _parse_abc(self, abc_data: list):
+        """Convert the abc note data into a list.
+        """
         result = []
         for tune in abc_data:
             result += self._parser.prep_abc_for_trie(tune)
         return result
 
     def _insert_into_trie(self, notes_data: list, trie_depth: int):
+        """Insert parsed abc data into a Trie.
+        """
         sequences = self._file_svc.create_sequences(notes_data, trie_depth)
         self._trie_svc.insert(sequences)
 
     def teaching_data_to_trie(self, filename: str, trie_depth: int):
+        """Read teaching data file and insert it into a Trie.
+
+        Args:
+            filename (str): Teaching data file name
+            trie_depth (int): Length of sequences to insert into Trie
+        """
         self._reset_key()
         read_data = self._read_teaching_data(filename)
         parsed_data = self._parse_abc(read_data)
         self._insert_into_trie(parsed_data, trie_depth)
 
     def _generate_tune(self, markov_degree: int, bars: int):
+        """Generate a specified number of bars based on the teaching data.
+        """
         tune_length = bars * 8
         generated_data = self._trie_svc.generate_sequence(
             markov_degree, tune_length
@@ -61,21 +77,20 @@ class AppLogic:
         self._file_svc.write_file(abc_data, filename)
 
     def generate_and_save(self, markov_degree: int, bars: int, title: str):
+        """Generate music in abc format and write to a file.
+
+        Args:
+            markov_degree (int): Markov chain degree (lower = more randomness).
+            bars (int): Number of bars to generate.
+            title (str): Title of generated tune.
+
+        Returns:
+            bool
+        """
         generated_tune = self._generate_tune(markov_degree, bars)
         if generated_tune:
             abc_data = self._convert_to_abc_format(generated_tune, title)
             filename = f'{title.replace(" ", "_")}_{markov_degree}.txt'
             self._save_abc_file(abc_data, filename)
             return True
-        else:
-            return False
-
-    # def run(self):
-    #     raw_input_data = self._file_svc.read_file(self._input)
-    #     input_data = self._file_svc.create_sequences(
-    #         raw_input_data, self._markov_deg+1)
-    #     self._trie_svc.insert(input_data)
-
-    #     generated_output = self._trie_svc.generate_sequence(
-    #         self._markov_deg, 16)
-    #     self._file_svc.write_file(generated_output, self._output)
+        return False

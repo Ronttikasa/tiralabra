@@ -61,10 +61,9 @@ class TestTrieService(unittest.TestCase):
 
     def test_generate_too_long_sequence(self):
         trie = TrieService()
-        input_data = [["d", "c", "b", "d"], ["c", "b", "d", "c"], ["b", "d", "c", "g"], ["d", "c", "g", "b"]]
+        input_data = [["d", "c", "b", "d"], ["c", "b", "d", "c"],
+                      ["b", "d", "c", "g"], ["d", "c", "g", "b"]]
         trie.insert(input_data)
         output = trie.generate_sequence(3, 20)
 
         self.assertFalse(output)
-
-

@@ -88,11 +88,11 @@ class ABCParser:
 
     def _generate_header(self, title: str, key: str):
         header = ["X: 1",
-            "T: " + title ,
-            "M: 4/4",
-            "L: 1/8",
-            "K: " + key
-        ]
+                  "T: " + title,
+                  "M: 4/4",
+                  "L: 1/8",
+                  "K: " + key
+                  ]
         return header
 
     def convert_to_abc(self, notes_data: list, title: str, key: str):
