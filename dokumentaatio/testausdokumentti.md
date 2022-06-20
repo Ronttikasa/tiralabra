@@ -23,7 +23,7 @@ Yksikkötestien testikattavuus seurattavissa Codecovissa:
 
 Ohjelman toimintaa on testattu data-kansiosta löytyvällä [testidatalla](/data/input/abc_test_data.txt) joka sisältää n. 15 eri reel-kappaletta [The Session](https://thesession.org/tunes) -sivustolta koottuna.
 
-Seuraavat kaksi katkelmaa on generoitu kyseisestä opetusdatasta, toinen ensimmäisen ja toinen 9. asteen Markovin ketjulla:
+Seuraavat katkelmat on generoitu kyseisestä opetusdatasta, eri Markovin ketjun asteilla:
 
 ![image](https://user-images.githubusercontent.com/44512829/174509912-e9ef49ca-2a11-4f3b-b078-7777188bb0b7.png)
 
@@ -47,4 +47,4 @@ K: Dmaj
 Gedc ABce|ddcd ddef|ffgf edcB|ggfg ggfe|dcBA Bcde|ddcd dded|ddAB AFAG|GFGE FDEf|]
 ```
 
-Pikaisella tarkastelulla opetusdataa vasten oli todettavissa että ensimmäisen asteen ketjulla generoidussa sävelsarjassa on sellaisia sekvenssejä joita ei esiinny missään opetusdatassa, ja yhdeksännen asteen ketjulla on generoitunut katkelma Saint Anne's -reeliä, joka näyttää lopussa vaihtuvan The Mountain Road -kappaleeksi (minulle on vielä vähän hämärän peitossa miten tämä tapahtui koska noin pitkää yhteistä osiota kappaleilla ei mielestäni ole).
+Pikaisella tarkastelulla opetusdataa vasten oli todettavissa että ensimmäisen asteen ketjulla generoidussa sävelsarjassa on esimerkiksi sellaisia neljän sävelen sekvenssejä joita ei esiinny missään opetusdatassa, ja yhdeksännen asteen ketjulla on generoitunut katkelma Saint Anne's -reeliä, joka näyttää lopussa vaihtuvan The Mountain Road -kappaleeksi.
