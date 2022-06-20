@@ -25,10 +25,8 @@ class FileService:
         with open(data_path) as file:
             for row in file:
                 row = row.replace("\n", "")
-                parts = row.split()
-                for part in parts:
-                    output.append(part)
-
+                if row:
+                    output.append(row)
         return output
 
     def create_sequences(self, data: list, sequence_length: int):
@@ -58,9 +56,9 @@ class FileService:
         dirname = os.path.dirname(__file__)
         data_path = os.path.join(dirname, "..", "data", "output", filename)
 
-        n = 4
-        input_rows = [input_data[i:i+n] for i in range(0, len(input_data), n)]
+        # n = 4
+        # input_rows = [input_data[i:i+n] for i in range(0, len(input_data), n)]
 
         with open(data_path, "w") as file:
-            for row in input_rows:
-                file.write(" ".join(row) + "\n")
+            for row in input_data:
+                file.write(row + "\n")

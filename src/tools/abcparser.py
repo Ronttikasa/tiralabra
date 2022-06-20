@@ -84,12 +84,11 @@ class ABCParser:
                 output += "|"
             elif i % 4 == 0:
                 output += " "
-        return output + "|]"
+        return output + "]"
 
     def _generate_header(self, title: str, key: str):
-        header = [
-            "X: 1",
-            "T: " + title,
+        header = ["X: 1",
+            "T: " + title ,
             "M: 4/4",
             "L: 1/8",
             "K: " + key
