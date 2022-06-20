@@ -1,0 +1,204 @@
+X: 1
+T: The Maid Behind The Bar
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:FAAB AFED|FAAB ABde|fBBA Bcde|fBBA BcdA|
+FAAB AFED|FAAB ABde|fBBA BcdB|AFEF D4:|
+|:faab afde|fdad fd d2|efga beef|gebe gfeg|
+fgaf bfaf|defd e2 de|fBBA BcdB|AFEF D4:|
+
+X: 1
+T: The Silver Spear
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:FA (3AAA BAFA|dfed BddA|FA (3AAA BAFA|dfed (3BdB AG|
+FA (3AAA BAFA|dfed Bdef|gage fgfe|dfed BdAd||
+|:fa (3aaa bfaf|gfed Bdde|fa (3aaa bfaf|gfed (3BdB A2|
+fa (3aaa bfaf|gfed Bdef|~g3 e ~f3 e|1 dfed BdAd:|2 dfed B2 AG||
+
+X: 1
+T: The Wind That Shakes The Barley
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+A2AB AFED|B2BA BcdB|A2AB AFED|gfed BcdB|
+A2AB AFED|B2BA BcdB|A2AB AFED|gfed Bcde||
+f2fd g2ge|f2fd Bcde|f2fd g2fg|afed Bcde|
+f2fd g2ge|f2fd Bcde|defg a2ab|afed BcdB||
+
+X: 7
+T: The Sally Gardens
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:D3F AFDF|AFBF AFEF|A2 (3FGA BcdB|AFEF DBAB|
+D3F AFDF|AFBF AFEF|A2 (3FGA BcdB|AFEF D4:|
+|:Addc d2 (3ABc|d2 fd edBd|Beed e2Bd|e2 fd ed (3Bcd|
+Addc d2 (3ABc|d2 fd edBd|A2 (3FGA BcdB|AFEF D2:|
+
+X: 1
+T: The Mountain Road
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+F2 AF BFAF|F2 AF EFDE|F2 AF BFAF|G2 FG EFDE|
+F2 AF BFAF|F2 AF EFD2|FAA2 BAFA|BABd eddA|
+d2dA BAFA|d2 de fgfe|d2 dA BAFA|G2 FG EDFA|
+d2 dA BAFA|d2 de fgfe|d2 dA BAFA|G2 FG EFDE|
+
+X: 1
+T: Saint Anne's
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:fedf edcB|A2FA DAFA|B2GB EBGB|A2FA DAFA|
+fedf edcB|A2FA DAFA|BGed cABc|eddc d2 de:|
+|:f2fg fedc|Bggf g2gf|edcB ABce|baag abag|
+f2fg fedc|Bggf g2gf|edcB ABcd|eddc d2 de:|
+
+X: 5
+T: The Merry Blacksmith
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:d2dA BAFA|ABdA BAFA|ABde f2ed|Beed egfe|
+d2dA BAFA|ABdA BAFA|ABde fdec|dBAG FD D2:|
+|:a2 ag f2 fe|d2 dA BAFA|ABde f2ed|Beed egfg|
+a2 ag fgfe|d2 dA BAFA|ABde fdec|dBAG FD D2:|
+
+X: 1
+T: The Bucks Of Oranmore
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|A2FA A2dB|A2FA BEE2|A2FA A2Bd|egfd edBd|
+A2FA A2dB|A2FA BEE2|DEFG AFAB|defd edBd||
+ADFD A2dB|ADFD BEE2|ADFD A2Bd|egfd edBd|
+ADFD A2dB|ADFD BEE2|DEFG AFAB|defd efge||
+a2fd edef|a2fd ed B2|a2fd edef|gefd edB2|
+a2fd edef|a2fd edB2|faaf bfaf|gefd edBd||
+f2df e2de|f2df edBd|f2df e2de|gefd edBd|
+f2df e2de|f2df edBd|faaf bfaf|gefd edBd||
+Adfd edfd|Adfd edBd|Adfd edfd|gefd edBd|
+Adfd edfd|Adfd edB2|faaf bfaf|gefd edBd||
+
+X: 1
+T: The Wise Maid
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:DE|F2FG FEDE|FAAB AFED|d2eg fdec|dBAG BEED|
+F2FG FEDE|FAAB AFED|d2eg fdec|dBAG FD:|
+|:FA|d2AG FDFA|dfaf gfeg|fedf eAcA|dfed cA A2|
+BAGB ADFD|dfaf gfed|Bdce dBAG|FGEF D2:|
+
+X: 13
+T: Miss McLeod's
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:D2 d2 BABd|F2 F2 FGFE|D2 d2 BABd|E2 E2 EGFE|
+D2 d2 BABd|F2 FG FG A2|B2 Bc BABc|dBAF E4:|
+|:D2 FD ADFD|F2 FE FGFE|D2 FD ADFD|E2 ED EGFE|
+D2 FD ADFD|F2 F2 F2 GA|B2 Bc BABc|dBAF E4:|
+
+X: 1
+T: The Earl's Chair
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:B2Bd BAFA|B2Bd BAFA|AF (3FFF DF (3FFF|AFdB AFEF|
+B2Bd BAFA|B2Bd BAFA|AFAB dcdf|edef d3z:|
+|:e2ec d2Bd|efec dFAB|e2ec d3e|fedB ADFA|
+e2ef eB (3BBB|gB (3BBB defg|afbf afef|gedB ADFA:|
+
+X: 5
+T: The Humours Of Tulla
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+d2 Ad BdAB|d2 fd edBc|d2 Ad BdAd|(3Bcd ef g2 fe|
+d2 Ad BdAB|d2 fd edBc|d2 Ad BdAd|(3Bcd ef g4||
+af ~f2 df ~f2|af ~f2 ge e2|af ~f2 dfed|(3Bcd ef g2 fg|
+af ~f2 df ~f2|af ~f2 ge e2|af ~f2 dfed|(3Bcd ef g4||
+
+X: 5
+T: MacLeod's Farewell
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+F2 BF AFEF|D2 DE FABd|e2 fd efed|B2 de dBAG|
+F2 BF AFEF|D2 DE FABd|e2 fd efdB|ABde d2:|
+A3 f edfd|A3 f edfd|ABdA BdAB|dBAF EFDE|
+F2 BF AFEF|D2 DE FABd|e2 fd efdB|ABde d2:|
+
+X: 1
+T: Rolling In The Ryegrass
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:A2AB AFDF|G2BG dGBG|ABAF DFAF|GBAG E2D2:|
+|:ABde f2fd|g2ge fedB|ABde fefa|gfdf e2d2:|
+
+X: 1
+T: The Concertina
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:A2FA BAFA|A2FA BAFA|B2BA B2BA|B2BA BAFA|
+A2FA BAFA|A2FA BAFA|FABc d2dA|BAFE D4:|
+|:Addd Addd|AddA BAFA|B2BA B2BA|B2BA BAFA|
+Addd Addd|AddA BAFA|FABc d2dA|BAFE D4:|
+
+X: 3
+T: Frank's
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+dfed B2 dB|ABde fdef|g3 b afda|bd'af (3efg fe|
+dfed B2dB|ABde fdef|g3 b afdf|edce d2 (3ABc|
+dfed B2dB|ABde fdef|g2gb afda|bd'af (3efg fe|
+dfed ABdB|ABde fdef|gb (3bbb afdf|edce dabc'||
+d'dd c'dd bd|abba fdef|g3 b afdf|efga ba (3abc'|
+d'dd c'dd bd|abba fdef|gb (3bbb afdf|edce dabc'|
+d'dd c'dd bd|abba fdef|g3 b adfa|bd'af (3efg fe|
+dfed B3 d|ABde fdef|g3 b afdf|edce d4||
+
+X: 3
+T: The Sailor's Bonnet
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+~A2 FA df ~f2|dfec dBBd|~A2 FA dfec|dBAF AD D2:|
+|:fa (3aaa afdf|afef dB ~B2|fb (3bbb bafa|bfaf fe e2|
+bf ~f2 afef|gfec dBBD|~A2 FA dfec|dBAF AD D2:|
+
+X: 1
+T: Father Kelly's
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:de|f2 df edBd|Addc defa|g2 ef gfed|Beed efge|
+f2 df edBd|Addc defg|a2 fa a2 fa|gece d2:|
+|:fg|a2 fa dafa|a2 fa dafa|fBBB edcB|ABcd edcB|
+a2 fa dafa|a2fa dafa|g2 eg f2 df|edce d2:|
