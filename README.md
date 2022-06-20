@@ -5,6 +5,10 @@
 
 [Määrittelydokumentti](/dokumentaatio/maarittely.md)
 
+[Testausdokumentti](/dokumentaatio/testausdokumentti.md)
+
+[Toteutusdokumentti](/dokumentaatio/toteutusdokumentti.md)
+
 [Viikkoraportti 1](/dokumentaatio/viikkoraportti1.md)
 
 [Viikkoraportti 2](/dokumentaatio/viikkoraportti2.md)
