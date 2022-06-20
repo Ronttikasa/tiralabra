@@ -14,5 +14,5 @@ ABC-notaation parserista puuttuu muutama sellainen ominaisuus joiden avulla sit√
 
 ## L√§hteet
 
-[Trie, Wikipedia](https://en.wikipedia.org/wiki/Trie)
-[ABC-notaatio](https://abcnotation.com/blog/2010/01/31/how-to-understand-abc-the-basics/)
+- [Trie, Wikipedia](https://en.wikipedia.org/wiki/Trie)
+- [ABC-notaatio](https://abcnotation.com/blog/2010/01/31/how-to-understand-abc-the-basics/)
