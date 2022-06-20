@@ -50,6 +50,8 @@ class AppLogic:
         generated_data = self._trie_svc.generate_sequence(
             markov_degree, tune_length
         )
+        if not generated_data:
+            return None
         return generated_data
 
     def _convert_to_abc_format(self, notes_data: list, title: str):
@@ -60,9 +62,13 @@ class AppLogic:
 
     def generate_and_save(self, markov_degree: int, bars: int, title: str):
         generated_tune = self._generate_tune(markov_degree, bars)
-        abc_data = self._convert_to_abc_format(generated_tune, title)
-        filename = f'{title.replace(" ", "_")}_{markov_degree}.txt'
-        self._save_abc_file(abc_data, filename)
+        if generated_tune:
+            abc_data = self._convert_to_abc_format(generated_tune, title)
+            filename = f'{title.replace(" ", "_")}_{markov_degree}.txt'
+            self._save_abc_file(abc_data, filename)
+            return True
+        else:
+            return False
 
     # def run(self):
     #     raw_input_data = self._file_svc.read_file(self._input)

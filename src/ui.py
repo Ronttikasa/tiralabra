@@ -25,7 +25,9 @@ class UI:
                 tune_name = input("Name your tune: ")
                 bars = int(input("Number of bars to generate: "))
                 while markov_degree > 0:
-                    self._app.generate_and_save(markov_degree, bars, tune_name)
+                    success = self._app.generate_and_save(markov_degree, bars, tune_name)
+                    if not success:
+                        print("Not enough data for this Markov degree")
                     markov_degree -= 1
             else:
                 print("Command not found, try again")

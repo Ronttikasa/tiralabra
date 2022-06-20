@@ -27,24 +27,27 @@ class TrieService:
         Returns:
             str: The value of the selected chord.
         """
-        total_sum = 0
-        for chord in chords:
-            total_sum += chords[chord].get_occurrences()
+        try:
+            total_sum = 0
+            for chord in chords:
+                total_sum += chords[chord].get_occurrences()
 
-        probability_limits = []
-        limit = 0
-        for chord in chords:
-            probability = chords[chord].get_occurrences() / total_sum
-            limit += probability
-            probability_limits.append((chord, limit))
+            probability_limits = []
+            limit = 0
+            for chord in chords:
+                probability = chords[chord].get_occurrences() / total_sum
+                limit += probability
+                probability_limits.append((chord, limit))
 
-        rand = random()
+            rand = random()
 
-        for elem in probability_limits:
-            if rand < elem[1]:
-                return elem[0]
+            for elem in probability_limits:
+                if rand < elem[1]:
+                    return elem[0]
 
-        return probability_limits[-1][0]
+            return probability_limits[-1][0]
+        except TypeError:
+            return None
 
     def generate_sequence(self, markov_degree: int, length: int):
         """Generates a new note sequence.
@@ -63,6 +66,8 @@ class TrieService:
             next_chord_candidates = self._trie.find_next_chords(
                 previous_sequence)
             next_chord = self._select_next_chord(next_chord_candidates)
+            if not next_chord:
+                return None
 
             output.append(next_chord)
             previous_sequence.append(next_chord)
