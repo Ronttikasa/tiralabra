@@ -47,14 +47,14 @@ class TrieService:
         return probability_limits[-1][0]
 
     def generate_sequence(self, markov_degree: int, length: int):
-        """Generates a new chord sequence.
+        """Generates a new note sequence.
 
         Args:
             markov_degree (int): Markov chain degree used in the generation.
             length (int): Length of the sequence to be generated
 
         Returns:
-            list: List of generated chords.
+            list: List of generated notes.
         """
         output = []
         previous_sequence = []

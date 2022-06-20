@@ -40,10 +40,10 @@ class ABCParser:
         """Convert other time values into corresponding number of eigth notes.
 
         Args:
-            sequence (list): _description_
+            sequence (list): Abc notation as a list where each character is a separate element.
 
         Returns:
-            _type_: _description_
+            list: Abc notation where every note value is a separate element.
         """
         output = []
         i = 0
