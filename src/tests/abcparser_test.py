@@ -75,7 +75,7 @@ class TestABCParser(unittest.TestCase):
     def test_add_barlines(self):
         abc_data = ["A,", "A,", "A,", "A,", "C", "f'", "f'", "f'", "g", "g"]
         result = self.parser._add_barlines(abc_data)
-        expected_result = "A,A,A,A, Cf'f'f'|gg|]"
+        expected_result = "A,A,A,A, Cf'f'f'|gg]"
         self.assertEqual(result, expected_result)
 
     def test_create_header(self):
@@ -108,6 +108,6 @@ class TestABCParser(unittest.TestCase):
             "M: 4/4",
             "L: 1/8",
             "K: Edor",
-            "A,A,AB Cf'g'g|e|]"
+            "A,A,AB Cf'g'g|e]"
         ]
         self.assertEqual(result, expected_result)
