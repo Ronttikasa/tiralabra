@@ -8,7 +8,7 @@ class UI:
     def ui(self):
         print("Reel Generator")
         print("")
-        print("This app generates reels (a Scottish/Irish dance tune) using Markov chains."\
+        print("This app generates reels (a Scottish/Irish dance tune) using Markov chains.\n"\
         "The app uses abc notation format. Your teaching data file should be located in /data/input")
         while True:
             self._help()

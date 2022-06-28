@@ -18,7 +18,7 @@ class FileService:
             List containing the input data.
         """
         dirname = os.path.dirname(__file__)
-        data_path = os.path.join(dirname, "..", "data", "input", filename)
+        data_path = os.path.join(dirname, "..", "..", "data", "input", filename)
 
         output = []
 
@@ -54,7 +54,7 @@ class FileService:
             filename (str): Name of the output file.
         """
         dirname = os.path.dirname(__file__)
-        data_path = os.path.join(dirname, "..", "data", "output", filename)
+        data_path = os.path.join(dirname, "..", ".." "data", "output", filename)
 
         # n = 4
         # input_rows = [input_data[i:i+n] for i in range(0, len(input_data), n)]

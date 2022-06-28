@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import Mock
-from trie_service import TrieService
-from trie import Trie
+from services.trie_service import TrieService
+from entities.trie import Trie
 
 
 class TestTrieService(unittest.TestCase):

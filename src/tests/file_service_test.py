@@ -1,5 +1,8 @@
 import unittest
-from file_service import FileService
+import os
+from repositories.file_service import FileService
+
+TESTDATA = os.path.join()
 
 
 class TestTrieNode(unittest.TestCase):

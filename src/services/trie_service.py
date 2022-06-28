@@ -1,5 +1,5 @@
 from random import random
-from trie import Trie
+from entities.trie import Trie
 
 
 class TrieService:

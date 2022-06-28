@@ -1,6 +1,6 @@
-from trie_service import TrieService
-from file_service import FileService
-from tools.abcparser import ABCParser
+from services.trie_service import TrieService
+from repositories.file_service import FileService
+from utilities.abcparser import ABCParser
 
 
 class AppLogic:

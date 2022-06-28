@@ -1,5 +1,5 @@
 import unittest
-from trie import Trie
+from entities.trie import Trie
 
 
 class TestTrieNode(unittest.TestCase):
