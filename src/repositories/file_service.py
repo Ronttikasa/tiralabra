@@ -1,4 +1,5 @@
 import os
+from config import INPUT_DATA_DIRECTORY, OUTPUT_DATA_DIRECTORY
 
 
 class FileService:
@@ -17,12 +18,14 @@ class FileService:
         Returns:
             List containing the input data.
         """
-        dirname = os.path.dirname(__file__)
-        data_path = os.path.join(dirname, "..", "..", "data", "input", filename)
+        # dirname = os.path.dirname(__file__)
+        # data_path = os.path.join(dirname, "..", "..", "data", "input", filename)
+
+        data_path = os.path.join(INPUT_DATA_DIRECTORY, filename)        
 
         output = []
 
-        with open(data_path) as file:
+        with open(data_path, "r", encoding="utf-8") as file:
             for row in file:
                 row = row.replace("\n", "")
                 if row:
@@ -53,12 +56,11 @@ class FileService:
             input_data (list): Data to be stored.
             filename (str): Name of the output file.
         """
-        dirname = os.path.dirname(__file__)
-        data_path = os.path.join(dirname, "..", ".." "data", "output", filename)
+        # dirname = os.path.dirname(__file__)
+        # data_path = os.path.join(dirname, "..", ".." "data", "output", filename)
 
-        # n = 4
-        # input_rows = [input_data[i:i+n] for i in range(0, len(input_data), n)]
+        data_path = os.path.join(OUTPUT_DATA_DIRECTORY, filename)        
 
-        with open(data_path, "w") as file:
+        with open(data_path, "w", encoding="utf-8") as file:
             for row in input_data:
                 file.write(row + "\n")
