@@ -15,7 +15,7 @@ Reel-generaattori on ohjelma joka muodostaa trie-tietorakennetta ja Markovin ket
 - Repositorion _data_-hakemistossa on tiedosto nimeltä _abc_test_data.txt_ jota voi käyttää opetusdatana ohjelmaa kokeillessa. 
 - Ohjelma tallentaa generoidun musiikin käyttäjän antaman nimen nimiseen tiedostoon _data/output_-hakemistoon.
 
-Tutustu myös tarkempaan [käyttöohjeeseen](/dokumentaatio/kayttoohje.md)
+Tutustu myös tarkempaan [käyttöohjeeseen](/dokumentaatio/kayttoohje.md).
 
 [Määrittelydokumentti](/dokumentaatio/maarittely.md)
 
