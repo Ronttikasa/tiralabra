@@ -40,14 +40,15 @@ class AppLogic:
         """
         result = []
         for tune in abc_data:
-            result += self._parser.prep_abc_for_trie(tune)
+            result.append(self._parser.prep_abc_for_trie(tune))
         return result
 
     def _insert_into_trie(self, notes_data: list, trie_depth: int):
         """Insert parsed abc data into a Trie.
         """
-        sequences = self._file_svc.create_sequences(notes_data, trie_depth)
-        self._trie_svc.insert(sequences)
+        for tune in notes_data:
+            sequences = self._file_svc.create_sequences(tune, trie_depth)
+            self._trie_svc.insert(sequences)
 
     def teaching_data_to_trie(self, filename: str, trie_depth: int):
         """Read teaching data file and insert it into a Trie.
@@ -62,8 +63,7 @@ class AppLogic:
             parsed_data = self._parse_abc(read_data)
             self._insert_into_trie(parsed_data, trie_depth)
             return True, None
-        else:
-            return False, read_data
+        return False, read_data
 
     def _generate_tune(self, markov_degree: int, bars: int):
         """Generate a specified number of bars based on the teaching data.
