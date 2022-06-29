@@ -1,6 +1,5 @@
-from ast import parse
 import unittest
-from unittest.mock import Mock, patch
+from unittest.mock import Mock
 from app_logic import AppLogic
 
 
@@ -33,16 +32,15 @@ class StubABCParser:
             return ["A", "F", "E", "D"]
         if "|:D3F AFDF|" in abc_data:
             return ["D", "D", "D", "F", "A", "F", "D", "F"]
-    
+
     def convert_to_abc(self, data, title, key):
         return ["X: 1", f"T: {title}", f"K: {key}", "adbe cfdg|]"]
 
 
-
-
 class TestAppLogic(unittest.TestCase):
     def setUp(self):
-        self.app = AppLogic(file_svc=StubFileService(), parser=StubABCParser(), trie_svc=Mock())
+        self.app = AppLogic(file_svc=StubFileService(),
+                            parser=StubABCParser(), trie_svc=Mock())
 
     def test_reset_key(self):
         self.app._key = "Edor"
@@ -62,12 +60,16 @@ class TestAppLogic(unittest.TestCase):
         self.assertEqual(result, "File doesn't exist")
 
     def test_parse_abc(self):
-        parsed_abc = self.app._parse_abc([["X: 1", "|:FAAB"], ["X: 2", "AFED"]])
-        self.assertEqual(parsed_abc, [["F", "A", "A", "B"], ["A", "F", "E", "D"]])
+        parsed_abc = self.app._parse_abc(
+            [["X: 1", "|:FAAB"], ["X: 2", "AFED"]])
+        self.assertEqual(
+            parsed_abc, [["F", "A", "A", "B"], ["A", "F", "E", "D"]])
 
     def test_insert_into_trie(self):
-        self.app._insert_into_trie([["F", "A", "A", "B"], ["A", "F", "E", "D"]], 3)
-        self.app._trie_svc.insert.assert_called_with([["A", "F", "E"], ["F", "E", "D"]])
+        self.app._insert_into_trie(
+            [["F", "A", "A", "B"], ["A", "F", "E", "D"]], 3)
+        self.app._trie_svc.insert.assert_called_with(
+            [["A", "F", "E"], ["F", "E", "D"]])
 
     def test_from_data_to_trie(self):
         success, message = self.app.teaching_data_to_trie("sally.txt", 3)
@@ -78,7 +80,8 @@ class TestAppLogic(unittest.TestCase):
         self.assertFalse(success)
 
     def test_generating_tune(self):
-        self.app._trie_svc.generate_sequence.return_value = ["a", "d", "b", "e", "c", "f", "d", "g"]
+        self.app._trie_svc.generate_sequence.return_value = [
+            "a", "d", "b", "e", "c", "f", "d", "g"]
         result = self.app._generate_tune(3, 1)
         self.assertEqual(result, ["a", "d", "b", "e", "c", "f", "d", "g"])
 
@@ -100,7 +103,8 @@ class TestAppLogic(unittest.TestCase):
         app._file_svc.write_file.assert_called()
 
     def test_generate_and_save(self):
-        self.app._trie_svc.generate_sequence.return_value = ["a", "d", "b", "e", "c", "f", "d", "g"]
+        self.app._trie_svc.generate_sequence.return_value = [
+            "a", "d", "b", "e", "c", "f", "d", "g"]
         success = self.app.generate_and_save(3, 1, "testing")
         self.assertTrue(success)
 
