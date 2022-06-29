@@ -29,5 +29,9 @@ class TestTrieNode(unittest.TestCase):
     def test_reading_file(self):
         result = self.file_service.read_file(self.input_filename)
         expected = ["X: 1", "T: The Maid Behind The Bar", "|:FAAB AFED|FAAB ABde|fBBA Bcde|fBBA BcdA|"]
-        self.assertEqual(result, expected)
+        self.assertEqual(result[1], expected)
+
+    def test_reading_method_invalid_filename(self):
+        result = self.file_service.read_file("nonexistent_file.txt")
+        self.assertFalse(result[0])
 
