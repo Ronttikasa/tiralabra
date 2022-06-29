@@ -1,6 +1,6 @@
 # Testausdokumentti
 
-Sovellusta on testattu automaattisilla yksikkötesteillä. Sovellusta on testattu manuaalisesti myös end-to-end-tasolla [data-kansiosta](/data/input) löytyvällä testidatalla, jolla on pystytty toteamaan että sovellus toimii kokonaisuutena odotetulla tavalla. 
+Sovellusta on testattu automaattisilla yksikkötesteillä. Sovellusta on testattu manuaalisesti myös end-to-end-tasolla [data-kansiosta](/data/input) löytyvällä testidatalla, jolla on pystytty toteamaan että sovellus toimii kokonaisuutena odotetulla tavalla. Yksikkötesteillä on esimerkiksi varmistettu että ohjelman generointialgoritmin luomat sekvenssit löytyvät opetusdatasta.
 
 ## Testien suorittaminen
 
@@ -16,7 +16,9 @@ poetry run invoke coverage-report
 
 ## Testikattavuus
 
-Yksikkötestien testikattavuus seurattavissa Codecovissa: 
+![image](https://user-images.githubusercontent.com/44512829/176534360-f76bf92b-0cd5-4cae-8bbf-77b92e18b0ea.png)
+
+Yksikkötestien testikattavuus tarkemmin Codecovissa: 
 [![codecov](https://codecov.io/gh/Ronttikasa/tiralabra/branch/main/graph/badge.svg?token=JEOZCTXS7I)](https://codecov.io/gh/Ronttikasa/tiralabra)
 
 ## End-to-end-testaus ja Markovin ketjun asteiden vertailua
