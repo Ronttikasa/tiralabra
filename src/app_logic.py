@@ -18,20 +18,22 @@ class AppLogic:
     def _read_teaching_data(self, filename: str):
         """Read teaching data from input file and separates the individual tunes in the data.
         """
-        input_data = self._file_svc.read_file(filename)
+        success, read_data = self._file_svc.read_file(filename)
 
-        result = []
-        tune = []
-        for row in input_data:
-            if row[0] == "X" and tune:
-                result.append(tune)
-                tune = []
-            if not self._key and row[0] == "K":
-                self._key = row[3:]
-            tune.append(row)
-        result.append(tune)
+        if success:
+            result = []
+            tune = []
+            for row in read_data:
+                if row[0] == "X" and tune:
+                    result.append(tune)
+                    tune = []
+                if not self._key and row[0] == "K":
+                    self._key = row[3:]
+                tune.append(row)
+            result.append(tune)
 
-        return result
+            return True, result
+        return False, read_data
 
     def _parse_abc(self, abc_data: list):
         """Convert the abc note data into a list.
@@ -55,9 +57,13 @@ class AppLogic:
             trie_depth (int): Length of sequences to insert into Trie
         """
         self._reset_key()
-        read_data = self._read_teaching_data(filename)
-        parsed_data = self._parse_abc(read_data)
-        self._insert_into_trie(parsed_data, trie_depth)
+        success, read_data = self._read_teaching_data(filename)
+        if success:
+            parsed_data = self._parse_abc(read_data)
+            self._insert_into_trie(parsed_data, trie_depth)
+            return True, None
+        else:
+            return False, read_data
 
     def _generate_tune(self, markov_degree: int, bars: int):
         """Generate a specified number of bars based on the teaching data.

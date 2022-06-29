@@ -28,9 +28,12 @@ class UI:
     def _generate_music(self):
         input_filename = input("Input filename: ")
         markov_degree = int(
-            input("Highest Markov degree you want to use: "))
-        self._app.teaching_data_to_trie(
+            input("Highest Markov degree you want to use (1-10): "))
+        success, message = self._app.teaching_data_to_trie(
             input_filename, markov_degree + 1)
+        if not success:
+            print(message)
+            return
         print("Generate a new tune")
         tune_name = input("Name your tune: ")
         bars = int(input("Number of bars to generate: "))
