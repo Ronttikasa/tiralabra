@@ -5,7 +5,7 @@
 
 ## Reel-generaattori
 
-Reel-generaattori on ohjelma joka muodostaa trie-tietorakennetta ja Markovin ketjuja hyödyntäen ohjelmalle syötettyyn opetusdataan perustuvaa musiikkia. Ohjelma hyödyntää [abc-notaatiota](https://abcnotation.com/blog/2010/01/31/how-to-understand-abc-the-basics/), jota käytetään mm. kansanmusiikin notaatioon nuottiviivastonotaation sijasta/ohella.
+Reel-generaattori on ohjelma joka muodostaa trie-tietorakennetta ja Markovin ketjuja hyödyntäen ohjelmalle syötettyyn opetusdataan perustuvaa musiikkia. Ohjelma hyödyntää [abc-notaatiota](https://abcnotation.com/blog/2010/01/31/how-to-understand-abc-the-basics/), jota käytetään mm. kansanmusiikin notaatioon nuottiviivastonotaation sijasta/ohella. Ohjelma on saanut myös nimensä kansanmusiikista: reelit ovat Skotlannissa ja Irlannissa tunnettuja kansantansseja, joita olen käyttänyt esimerkkiaineistona.
 
 
 ### Ohjelman asennus:
