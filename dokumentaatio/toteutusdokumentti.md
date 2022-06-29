@@ -14,6 +14,8 @@ ABC-notaation parserista puuttuu muutama sellainen ominaisuus joiden avulla sit�
 
 Ohjelmaa voisi laajentaa antamalla käyttäjälle mahdollisuus valita mitä logiikkaa ohjelma käyttää muodostaessaan sävelsekvenssejä. Nykymuodossaan trie-rakenteessa pidetään kirjaa kutakin säveltä seuraavien sävelten frekvenssistä ja seuraavan sävelen arvonta tapahtuu näiden frekvenssien painottamana. Seuraava sävel olisi kuitenkin mahdollista arpoa esimerkiksi tasatodennäköisyyksillä tai painottamalla pienintä frekvenssiä.
 
+Jatkokehityksessä ohjelmaa voisi myös laajentaa tukemaan paremmin muita tahtilajeja. Reel on 4/4-tahtilajinen tanssikappale, mutta irlantilaisessa kansanmusiikissa yleisiä ovat myös esimerkiksi 6/8-tahtilajiset jigit ja 9/8-tahtilajiset slip jigit.
+
 Ohjelma ei validoi käyttäjän antamia syötteitä.
 
 ## Lähteet
