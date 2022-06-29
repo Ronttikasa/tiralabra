@@ -69,12 +69,28 @@ class ABCParser:
         return output
 
     def prep_abc_for_trie(self, abc_data: list):
+        """Convert raw abc data into values usable in tune generation
+
+        Args:
+            abc_data (list): Input abc data
+
+        Returns:
+            list: Abc notation where every note value is a separate element.
+        """
         data_v1 = self._remove_header(abc_data)
         data_v2 = self._strip_extra(data_v1)
         data_v3 = self._modify_time_values(data_v2)
         return data_v3
 
     def _add_barlines(self, abc_data: list):
+        """Add barlines and spacing to generated tune.
+
+        Args:
+            abc_data (list): Generated abc data
+
+        Returns:
+            str 
+        """
         output = ""
         i = 0
         while i < len(abc_data):
@@ -87,6 +103,15 @@ class ABCParser:
         return output + "]"
 
     def _generate_header(self, title: str, key: str):
+        """Generate header for abc format
+
+        Args:
+            title (str): Title of tune
+            key (str): Key of tune
+
+        Returns:
+            list: Header elements.
+        """
         header = ["X: 1",
                   "T: " + title,
                   "M: 4/4",
@@ -96,6 +121,16 @@ class ABCParser:
         return header
 
     def convert_to_abc(self, notes_data: list, title: str, key: str):
+        """Convert notes data into abc format with barlines and header.
+
+        Args:
+            notes_data (list): 
+            title (str): Tune title
+            key (str): Tune key
+
+        Returns:
+            list: Notes data with abc format headers.
+        """
         header = self._generate_header(title, key)
         abc_part = self._add_barlines(notes_data)
         header.append(abc_part)
