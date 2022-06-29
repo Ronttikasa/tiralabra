@@ -9,7 +9,8 @@ class UI:
         print("Reel Generator")
         print("")
         print("This app generates reels (a Scottish/Irish dance tune) using Markov chains.\n"
-              "The app uses abc notation format. Your teaching data file should be located in /data/input")
+              "The app uses abc notation format. Your teaching data file should be located\
+                in /data/input directory\n")
         while True:
             self._help()
             command = input("Command: ")
