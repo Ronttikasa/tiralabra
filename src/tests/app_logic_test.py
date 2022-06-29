@@ -1,5 +1,6 @@
+from ast import parse
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 from app_logic import AppLogic
 
 
@@ -32,6 +33,9 @@ class StubABCParser:
             return ["A", "F", "E", "D"]
         if "|:D3F AFDF|" in abc_data:
             return ["D", "D", "D", "F", "A", "F", "D", "F"]
+    
+    def convert_to_abc(self, data, title, key):
+        return ["X: 1", f"T: {title}", f"K: {key}", "adbe cfdg|]"]
 
 
 
@@ -68,3 +72,39 @@ class TestAppLogic(unittest.TestCase):
     def test_from_data_to_trie(self):
         success, message = self.app.teaching_data_to_trie("sally.txt", 3)
         self.assertTrue(success)
+
+    def test_invalid_file_name(self):
+        success, message = self.app.teaching_data_to_trie("nonexistent.txt", 2)
+        self.assertFalse(success)
+
+    def test_generating_tune(self):
+        self.app._trie_svc.generate_sequence.return_value = ["a", "d", "b", "e", "c", "f", "d", "g"]
+        result = self.app._generate_tune(3, 1)
+        self.assertEqual(result, ["a", "d", "b", "e", "c", "f", "d", "g"])
+
+    def test_no_tune_generated(self):
+        self.app._trie_svc.generate_sequence.return_value = None
+        result = self.app._generate_tune(3, 1)
+        self.assertFalse(result)
+
+    def test_convert_to_abc(self):
+        self.app._key = "Dmin"
+        data = ["a", "d", "b", "e", "c", "f", "d", "g"]
+        result = self.app._convert_to_abc_format(data, "Test song")
+        self.assertEqual(result[0], "X: 1")
+        self.assertEqual(result[1], "T: Test song")
+
+    def test_save_file(self):
+        app = AppLogic(file_svc=Mock(), trie_svc=Mock(), parser=Mock())
+        app._save_abc_file(["a", "b", "c"], "test song")
+        app._file_svc.write_file.assert_called()
+
+    def test_generate_and_save(self):
+        self.app._trie_svc.generate_sequence.return_value = ["a", "d", "b", "e", "c", "f", "d", "g"]
+        success = self.app.generate_and_save(3, 1, "testing")
+        self.assertTrue(success)
+
+    def test_generate_and_save_no_sequence(self):
+        self.app._trie_svc.generate_sequence.return_value = None
+        success = self.app.generate_and_save(3, 4, "testing more")
+        self.assertFalse(success)
