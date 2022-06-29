@@ -8,8 +8,8 @@ class UI:
     def ui(self):
         print("Reel Generator")
         print("")
-        print("This app generates reels (a Scottish/Irish dance tune) using Markov chains.\n"\
-        "The app uses abc notation format. Your teaching data file should be located in /data/input")
+        print("This app generates reels (a Scottish/Irish dance tune) using Markov chains.\n"
+              "The app uses abc notation format. Your teaching data file should be located in /data/input")
         while True:
             self._help()
             command = input("Command: ")
@@ -22,8 +22,8 @@ class UI:
 
     def _help(self):
         print("Commands:\n\
-            r: new teaching file\n\
-            q: quit")
+            r - new teaching file\n\
+            q - quit")
 
     def _generate_music(self):
         input_filename = input("Input filename: ")

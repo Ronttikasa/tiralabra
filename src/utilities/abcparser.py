@@ -89,7 +89,7 @@ class ABCParser:
             abc_data (list): Generated abc data
 
         Returns:
-            str 
+            str
         """
         output = ""
         i = 0
@@ -124,7 +124,7 @@ class ABCParser:
         """Convert notes data into abc format with barlines and header.
 
         Args:
-            notes_data (list): 
+            notes_data (list):
             title (str): Tune title
             key (str): Tune key
 

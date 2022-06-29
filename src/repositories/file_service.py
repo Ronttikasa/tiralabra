@@ -19,7 +19,7 @@ class FileService:
             List containing the input data.
         """
         try:
-            data_path = os.path.join(INPUT_DATA_DIRECTORY, filename)        
+            data_path = os.path.join(INPUT_DATA_DIRECTORY, filename)
 
             output = []
 
@@ -57,7 +57,7 @@ class FileService:
             filename (str): Name of the output file.
         """
 
-        data_path = os.path.join(OUTPUT_DATA_DIRECTORY, filename)        
+        data_path = os.path.join(OUTPUT_DATA_DIRECTORY, filename)
 
         with open(data_path, "w", encoding="utf-8") as file:
             for row in input_data:
