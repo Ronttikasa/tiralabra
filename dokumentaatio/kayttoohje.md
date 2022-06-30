@@ -2,7 +2,7 @@
 
 ## Ohjelman asennus:
 
-- Kloonaa repositorio, ja asenna riippuvuudet komennolla `poetry install`.
+- Kloonaa repositorio tai lataa uusin release, ja asenna riippuvuudet komennolla `poetry install`.
 - Käynnistä ohjelma komennolla `poetry run invoke start`.
 
 ## Ohjelman käyttö:
